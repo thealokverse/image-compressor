@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <meta name="description" content="A local, privacy-first image compressor with an Apple-inspired minimal UI.">
+    <!-- Load custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load browser-image-compression library via CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Image Compressor</h1>
+            <p>Fast. Private. Simple.</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept="image/jpeg, image/png, image/webp" multiple hidden>
+                <div class="upload-content">
+                    <div class="upload-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Drag & Drop Images</h3>
+                    <p>or click to browse your device</p>
+                    <span class="supported-formats">JPEG, PNG, WEBP</span>
+                </div>
+            </section>
+
+            <!-- Workspace Section (Hidden Initially) -->
+            <section class="workspace hidden" id="workspace">
+                
+                <!-- Global Settings Panel -->
+                <div class="settings-panel app-card">
+                    <div class="settings-header">
+                        <h3>Compression Settings</h3>
+                        <div class="settings-actions">
+                            <button id="addMoreBtn" class="btn btn-secondary btn-sm">Add More</button>
+                            <button id="clearAllBtn" class="btn btn-secondary btn-sm">Clear All</button>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <div class="setting-item slider-item">
+                            <div class="setting-labels">
+                                <label for="compressionSlider">Quality</label>
+                                <span id="compressionValue">80%</span>
+                            </div>
+                            <input type="range" id="compressionSlider" min="1" max="100" value="80" class="apple-slider">
+                        </div>
+                        
+                        <div class="setting-item">
+                            <label for="maxWidthInput">Max Width (px)</label>
+                            <input type="number" id="maxWidthInput" placeholder="Auto" min="10" class="apple-input">
+                        </div>
+
+                        <div class="setting-item">
+                            <label for="formatSelect">Output Format</label>
+                            <select id="formatSelect" class="apple-input">
+                                <option value="original">Keep Original</option>
+                                <option value="image/jpeg">JPEG</option>
+                                <option value="image/png">PNG</option>
+                                <option value="image/webp">WEBP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Cards Container -->
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Cards will be injected here via script.js -->
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div class="privacy-notice">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <span><strong>Privacy First:</strong> Your images never leave your device. All processing happens locally.</span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
