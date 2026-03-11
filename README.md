@@ -2,7 +2,7 @@
 
 Fast, privacy-first image compression tool.
 
-Features
+# Features
 - Drag and drop upload
 - Adjustable compression
 - Before/after preview
@@ -11,12 +11,12 @@ Features
 - Format conversion
 - Metadata removal
 
-Privacy
+# Privacy
 All compression happens locally in your browser.
 Images are never uploaded.
 
-Tech Stack
-HTML
-CSS
-JavaScript
-browser-image-compression
+# Tech Stack
+- HTML
+- CSS
+- JavaScript
+- browser-image-compression
