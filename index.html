@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Compressor</title>
     <meta name="description" content="A local, privacy-first image compressor with an Apple-inspired minimal UI.">
-    <!-- Load custom stylesheet -->
+    
     <link rel="stylesheet" href="style.css">
-    <!-- Load browser-image-compression library via CDN -->
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         </header>
 
         <main class="main-content">
-            <!-- Upload Section -->
+            
             <section class="upload-area" id="uploadArea">
                 <input type="file" id="fileInput" accept="image/jpeg, image/png, image/webp" multiple hidden>
                 <div class="upload-content">
@@ -35,10 +35,10 @@
                 </div>
             </section>
 
-            <!-- Workspace Section (Hidden Initially) -->
+            
             <section class="workspace hidden" id="workspace">
                 
-                <!-- Global Settings Panel -->
+                
                 <div class="settings-panel app-card">
                     <div class="settings-header">
                         <h3>Compression Settings</h3>
@@ -74,9 +74,9 @@
                     </div>
                 </div>
 
-                <!-- Dynamic Cards Container -->
+                
                 <div class="cards-container" id="cardsContainer">
-                    <!-- Cards will be injected here via script.js -->
+                    
                 </div>
 
             </section>
